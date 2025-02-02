@@ -24,12 +24,9 @@ export const getCandidates = async (filters?: TFilter) => {
     }
   }
 
-  console.log(whereConditions, "line 28");
-
   const candidates = await prisma.candidate.findMany({
     where: whereConditions,
   });
 
-  console.log(candidates, "server handled");
   return candidates;
 };

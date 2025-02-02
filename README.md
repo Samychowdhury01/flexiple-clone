@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Flexiple Clone
 
-## Getting Started
+A full-stack Next.js application built with Prisma and MongoDB. The project includes API routes for handling candidates and reviews, as well as server actions to retrieve data from the database.
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Framework:** Next.js (App Router)
+- **Styling:** Tailwind CSS, shadcn
+- **Database:** MongoDB (via Prisma ORM)
+- **UI Components:** Radix UI
+- **Build Tools:** TypeScript, ESLint, Turbopack
+
+## Features
+
+- API Routes:
+  - `POST /api/candidates` - Create a new candidate in the database.
+  - `POST /api/reviews` - Create a new review in the database.
+- Server actions for retrieving candidates and reviews data.
+
+## Installation & Setup
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- Node.js (latest LTS recommended)
+- MongoDB (or a MongoDB Atlas instance)
+- Package manager (npm)
+
+### Clone the repository
+
+```sh
+git clone https://github.com/Samychowdhury01/flexiple-clone.git
+cd flexiple-clone
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
 
-## Learn More
+### Setup Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+Create a `.env` file in the root directory and add the following:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+DATABASE_URL="mongodb+srv://<admin-username>:<admin-password>@cluster0.ktqos2d.mongodb.net/<collection-name>?retryWrites=true&w=majority"
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Run the Development Server
 
-## Deploy on Vercel
+```sh
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This will start the Next.js development server on `http://localhost:3000`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Seed the Database (Optional)
+
+If you need initial test data, run:
+
+```sh
+npx prisma db seed
+```
+
+## Project Structure
+
+```
+.
+├── prisma/          # Prisma schema and migration files
+    └── seed.ts      # Seed script
+├── public/          # Static assets
+├── src/
+│   ├── app/         # Next.js App Router components
+│   |   └── api      # API routes
+│   ├── assets/      # images and other files
+│   ├── components/  # UI components
+│   ├── lib/         # Utility functions
+│   ├── actions/     # For server action
+│   ├── font/        # as google does provide supply font
+│   └── types        # define types
+├── .env             # Environment variables
+├── next.config.js   # Next.js configuration
+├── package.json     # Project dependencies
+└── README.md        # Project documentation
+```

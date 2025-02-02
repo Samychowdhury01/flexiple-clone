@@ -1,4 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */
+
 import React from "react";
 import GradientBgComponent from "../ui/gradient-bg-component";
 import Container from "../ui/container";

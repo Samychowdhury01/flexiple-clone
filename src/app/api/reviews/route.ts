@@ -4,11 +4,11 @@ import { type NextRequest, NextResponse } from "next/server";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    console.log(body);
+
     const review = await prisma.review.create({
       data: body,
     });
-console.log(review, 'from line 11')
+
     if (!review) {
       return NextResponse.json({
         status: 400,

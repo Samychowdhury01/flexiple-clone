@@ -3,8 +3,7 @@ import { type NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
   const body = await request.json();
-  console.log(body, 'from request');
-  
+
   if (Object.entries(body).length === 0) {
     return NextResponse.json({
       status: 404,
@@ -17,7 +16,7 @@ export async function POST(request: NextRequest) {
   const candidate = await prisma.candidate.create({
     data: {
       ...body,
-      skills: body?.skills.map((skill: string) => skill.toLowerCase()) 
+      skills: body?.skills.map((skill: string) => skill.toLowerCase()),
     },
   });
 
