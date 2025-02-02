@@ -2,13 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background: #0d0d0d;
 
-
-body{
-  background: rgb(47,46,162);
-  background: radial-gradient(circle, rgba(47,46,162,1) 0%, rgba(0,0,0,1) 100%);
-
+  /* background: radial-gradient(
+    circle,
+    rgba(47, 46, 162, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  ); */
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #929193;
+  border-radius: 10px;
+  height: 5px;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -36,8 +53,8 @@ body{
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
-    --font-pt-sans: '--font-pt-sans'
   }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -71,19 +88,38 @@ body{
     @apply border-border;
   }
 
-.h1 {
-  font-size: 40px;
-  line-height: 48px;
-} 
+  .h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .h2 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+}
+
+@layer components {
+  .card-gradient-border {
+    @apply bg-gradient-to-r from-[#0A4FFF] via-[#7A3EF3] to-[#FF29A8];
+  }
+  .card-gradient-bg {
+    @apply bg-gradient-to-r from-[#0a4fff0e] via-[#7a3ef31c] to-[#ff29a90e];
+  }
+  .gradient-bg {
+    @apply bg-gradient-to-r from-[#0a4fff46] via-[#7a3ef344] to-[#0a4fff3f];
+  }
 }
 
 .gradient {
-  background: rgb(47,46,162);
-background: radial-gradient(circle, rgba(47,46,162,1) 0%, rgba(0,0,0,1) 100%);
+  /* background: linear-gradient(to bottom,  rgba(47, 46, 162, 1) 0%, rgba(0, 0, 0, 1) 100%); */
 
+  background: radial-gradient(
+    circle,
+    rgba(47, 46, 162, 1) 0%,
+    /* rgba(47, 46, 162, 1) 80%, */ rgba(0, 0, 0, 1) 90%
+  );
 }
-
-.review-section-gradient{
-  background: rgb(47,46,162);
-background: linear-gradient(-90deg, rgba(47,46,162,1) 0%, rgba(0,0,0,1) 100%);
+.hero-section-gradient {
+  background: linear-gradient(180deg, #2340d5 41.03%, #792dc3 99.08%);
+  filter: blur(120px);
 }

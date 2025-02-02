@@ -2,14 +2,17 @@ import React from "react";
 import Container from "../ui/container";
 import Image from "next/image";
 import author from "@/assets/review-author.webp";
-import { CarouselPlugin } from "./review-carousel";
+
 import { getReview } from "@/action/review-action";
+import CarouselPlugin from "./review-carousel";
 
 const ReviewSection = async() => {
   const reviews = await getReview();
   return (
     <div className=" text-white py-20 md:py-24">
       <Container>
+      <div className="relative"> 
+      <div className="gradient-bg w-[1000px] h-[500px] blur-2xl rounded-t-full absolute top-0 left-0 -z-10 transform"></div>
         <div className="mx-auto mb-15 flex max-w-6xl flex-col gap-5 text-center lg:mb-20 w-full md:w-4/5 ">
           <h1 className="font-mono text-[48px] font-bold">
             100+ fast-growing companies love Flexiple!
@@ -37,7 +40,7 @@ const ReviewSection = async() => {
               and I work together very well and I appreciate his expertise.”
             </p>
             <div className="flex flex-col gap-2">
-              <p className="text-[30px] leading-[38px] tracking-[-0.15px] font-mono">
+              <p className="h2 tracking-[-0.15px] font-supply">
                 Paul Cikatricis
               </p>
               <p className="text-lg opacity-80">
@@ -46,6 +49,7 @@ const ReviewSection = async() => {
             </div>
           </div>
         </div>
+      </div>
         {/* review cards */}
      <div className="mt-20">
      <CarouselPlugin reviews={reviews}/>

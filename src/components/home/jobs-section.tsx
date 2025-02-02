@@ -21,17 +21,17 @@ const JobsSection = () => {
     <Container>
       <div className="text-white">
         <div className="flex items-center gap-2">
-          <Home /> <ChevronRight size={20} />{" "}
+          <Home /> <ChevronRight size={20} />
           <p className="opacity-80 text-lg">Hire Developers</p>
         </div>
-        <div className="mt-10 flex items-center gap-10">
+        <div className="mt-10 flex items-center gap-10 text-accent-foreground">
           <p>Filter By</p>
           <Select>
             <SelectTrigger className="w-[180px] p-5 round-md">
               <SelectValue placeholder="Select a skill" />
             </SelectTrigger>
             <SelectContent>
-              <SelectGroup className=" ">
+              <SelectGroup className=" text-accent border-none outline-0">
                 <SelectLabel>Skills</SelectLabel>
                 <SelectItem value="react">React</SelectItem>
                 <SelectItem value="nextjs">Nextjs</SelectItem>
@@ -65,19 +65,24 @@ const JobsSection = () => {
             ))}
           </div>
 
-          {/* sticky section */}
-          <div className="flex flex-col gap-5 sticky top-4 lg:w-[35%] border p-8 rounded-lg h-fit">
-            <h3 className="font-mono text-[30px] leading-[38px] tracking-[-0.15px]">
-              99% of Flexiple's clients hire talent after a risk-free trial.
-            </h3>
-            <p>
-              Flexiple's meticulous screening and matching process connects you
-              with exceptional developers perfectly aligned to your specific
-              needs.
-            </p>
-            <Button className="bg-white text-black w-full font-mono hover:bg-[#CECECF]">
-              Book a call
-            </Button>
+         
+          <div className="max-w-md p-[1px] rounded-[24px] card-gradient-border h-fit sticky top-4">
+            <div className="rounded-[23px] bg-muted card-gradient-bg p-8 h-full">
+              <h2 className="text-4xl font-supply mb-6 text-white leading-tight">
+                99% of Flexiple's clients hire talent after a risk-free trial.
+              </h2>
+              <p className="text-gray-400 mb-8">
+                Flexiple's meticulous screening and matching process connects
+                you with exceptional developers perfectly aligned to your
+                specific needs.
+              </p>
+              <Button
+                variant="secondary"
+                className="w-full bg-white text-black hover:bg-gray-100 rounded-full"
+              >
+                Book a consultation call →
+              </Button>
+            </div>
           </div>
         </div>
       </div>

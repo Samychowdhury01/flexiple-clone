@@ -1,12 +1,19 @@
+import { Space_Grotesk } from "next/font/google"
 import type { Metadata } from "next"
-import { PT_Sans } from "next/font/google"
 import "./globals.css"
 import type React from "react"
+import localFont from "next/font/local"
 
-const ptSans = PT_Sans({
+const supplyFont = localFont({
+  src: "../font/Supply-Regular.ttf",
+  variable: "--font-supply",
+})
+
+// Configure Space Grotesk with all weights you need
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-pt-sans",
+  display: "swap",
+  variable: "--font-space-grotesk",
 })
 
 export const metadata: Metadata = {
@@ -20,11 +27,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={ptSans.variable}>
-      <body className="font-sans antialiased">
-        <div>
-          {children}
-        </div>
+    <html lang="en" className={`${spaceGrotesk.variable} ${supplyFont.variable}`}>
+      <body className={spaceGrotesk.className}>
+        <div>{children}</div>
       </body>
     </html>
   )

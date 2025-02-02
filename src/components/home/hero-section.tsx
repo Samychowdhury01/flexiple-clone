@@ -9,13 +9,13 @@ const HeroSection = () => {
     <div className=" text-white py-20 md:py-24">
       <Container>
         <div className="flex max-w-[960px] flex-col items-start gap-10 mx-auto md:items-center text-center ">
-          <h1 className="h1 font-medium tracking-[-0.15px] h2 ">
+          <h1 className="text-[52px] leading-[60px] tracking-[-0.13em] font-supply font-medium">
             Hire .NET Developers: Affordable, Dedicated .NET Experts in 72 hours
           </h1>
           <p className="text-xl">
-            Hire .NET developers to{" "}
+            Hire .NET developers to
             <strong>enhance your project's efficiency and productivity</strong>.
-            Build dynamic web applications using{" "}
+            Build dynamic web applications using
             <strong>ASP.NET, C#, Entity Framework, and MVC</strong>.
           </p>
           <p className="text-xl">
