@@ -17,6 +17,28 @@ A full-stack Next.js application built with Prisma and MongoDB. The project incl
   - `POST /api/reviews` - Create a new review in the database.
 - Server actions for retrieving candidates and reviews data.
 
+## Sample Data
+
+### Review
+```json
+{
+    "authorName": "Emily Johnson",
+    "position": "Marketing Specialist",
+    "review": "The features are exactly what we needed. The UI is intuitive, and the overall performance is excellent."
+}
+```
+
+### Candidate
+```json
+{
+    "name": "David Lee",
+    "experience": 2,
+    "notice": "46-60 days",
+    "ctc": 400000,
+    "skills": ["Angular", "JavaScript"]
+}
+```
+
 ## Installation & Setup
 
 ### Prerequisites
@@ -86,3 +108,8 @@ npx prisma db seed
 ├── package.json     # Project dependencies
 └── README.md        # Project documentation
 ```
+
+
+# Live Link
+
+[click here to see the live site](https://flexiple-clone.vercel.app/)  

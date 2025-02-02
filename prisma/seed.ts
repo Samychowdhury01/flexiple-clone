@@ -38,7 +38,7 @@ async function main() {
       experience: 5,
       notice: "Immediately Available",
       ctc: 800000,
-      skills: ["JavaScript", "React", "Node.js"],
+      skills: ["javascript", "react", "node.js"],
     },
     {
       id: "63f5c7f36a6d42d9b77f1f69",
@@ -46,7 +46,7 @@ async function main() {
       experience: 3,
       notice: "1-15 days",
       ctc: 600000,
-      skills: ["Python", "Docker"],
+      skills: ["python", "docker"],
     },
     {
       id: "63f5c7f36a6d42d9b77f1f70",
@@ -54,7 +54,7 @@ async function main() {
       experience: 7,
       notice: "16-30 days",
       ctc: 1000000,
-      skills: ["React", "Next.js", "Node.js"],
+      skills: ["react", "next.js", "node.js"],
     },
     {
       id: "63f5c7f36a6d42d9b77f1f71",
@@ -62,7 +62,7 @@ async function main() {
       experience: 2,
       notice: "46-60 days",
       ctc: 400000,
-      skills: ["Angular", "JavaScript"],
+      skills: ["angular", "javascript"],
     },
   ];
 
