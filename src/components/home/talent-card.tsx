@@ -1,25 +1,26 @@
+import { TCandidate } from "@/types/types.candidate";
 import { Banknote, Briefcase, BriefcaseBusiness, Calendar } from "lucide-react";
 import React from "react";
 
-const TalentCard = () => {
+const TalentCard: React.FC<{ candidate: TCandidate }> = ({ candidate }) => {
   return (
     <div className="rounded-[10px] border duration-100 ease-out w-full !p-5">
       <div>
         <h3 className="text-[40px] leading-[48px]  font-supply font-medium tracking-[-0.15px] order-last md:order-first">
-          Shubham Singh
+          {candidate?.name}
         </h3>
         <div className="flex-wrap gap-x-6 gap-y-1 md:flex mt-5 text-accent-foreground">
           <div className="flex items-center gap-2">
             <Briefcase />
-            <p>Experience: 4.2 years</p>
+            <p>Experience: {candidate?.experience} years</p>
           </div>
           <div className="flex items-center gap-2">
             <Calendar />
-            <p>Notice: </p>
+            <p>Notice: {candidate?.notice}</p>
           </div>
           <div className="flex items-center gap-2">
             <Banknote />
-            <p>Current CTC: 4.2 years</p>
+            <p>Current CTC: {candidate.ctc}LPA</p>
           </div>
         </div>
         <div
@@ -39,10 +40,15 @@ const TalentCard = () => {
             <div className="text-accent-foreground">Oct 22 -Present</div>
             <div></div>
           </div>
-          <div className="flex items-center mt-10">
-            <p className="px-2.5 py-[5px] rounded-full border border-dGrey1/60 dark:border-white/60 bg-dGrey1/10 dark:bg-white/10 text-sm dark:text-white whitespace-nowrap flex items-center gap-1 md:text-sm !border-[#FFFFFF80] !bg-[#00000066]">
-              Javascript
-            </p>
+          <div className="flex items-center gap-2 mt-10">
+            {candidate?.skills.map((skill, index) => (
+              <p
+                key={index}
+                className="px-2.5 py-[5px] rounded-full border border-dGrey1/60 dark:border-white/60 bg-dGrey1/10 dark:bg-white/10 text-sm dark:text-white whitespace-nowrap flex items-center gap-1 md:text-sm !border-[#FFFFFF80] !bg-[#00000066]"
+              >
+                {skill}
+              </p>
+            ))}
           </div>
         </div>
       </div>

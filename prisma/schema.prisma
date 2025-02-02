@@ -15,3 +15,12 @@ model Review {
     position    String
     review      String
 }
+
+model Candidate {
+    id          String  @id @default(auto()) @map("_id") @db.ObjectId
+    name        String
+    experience  Int
+    notice      String
+    ctc         Int
+    skills      String[]
+}

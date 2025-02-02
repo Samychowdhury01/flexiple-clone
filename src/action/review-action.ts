@@ -2,7 +2,7 @@
 
 import prisma from "@/lib/prisma";
 
-export const getReview = async () => {
+export const getReviews = async () => {
   const reviews = await prisma.review.findMany();
   return reviews;
 };
