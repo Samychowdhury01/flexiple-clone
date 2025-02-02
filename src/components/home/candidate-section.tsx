@@ -35,15 +35,15 @@ const CandidateSection = async ({
         {/* job section */}
         <div className=" mt-10 lg:flex lg:justify-between">
           {/* dynamic data */}
-          <div className="lg:w-[60%] flex flex-col items-center gap-10">
+          <div className="lg:w-[60%] flex flex-col items-center gap-10 mb-10 md:mb-0">
             {candidates.map((candidate) => (
               <TalentCard key={candidate?.id} candidate={candidate} />
             ))}
           </div>
 
           <div className="max-w-md p-[1px] rounded-[24px] card-gradient-border h-fit sticky top-4">
-            <div className="rounded-[23px] bg-muted card-gradient-bg p-8 h-full">
-              <h2 className="text-4xl font-supply mb-6 text-white leading-tight">
+            <div className="rounded-[23px] bg-muted card-gradient-bg p-4 md:p-8 h-full">
+              <h2 className="text-2xl md:text-4xl font-supply mb-6 text-white tracking-[-0.15px]">
                 99% of Flexiple's clients hire talent after a risk-free trial.
               </h2>
               <p className="text-gray-400 mb-8">

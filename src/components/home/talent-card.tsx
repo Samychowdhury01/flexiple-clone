@@ -6,7 +6,7 @@ const TalentCard: React.FC<{ candidate: TCandidate }> = ({ candidate }) => {
   return (
     <div className="rounded-[10px] border duration-100 ease-out w-full !p-5">
       <div>
-        <h3 className="text-[40px] leading-[48px]  font-supply font-medium tracking-[-0.15px] order-last md:order-first">
+        <h3 className="text-3xl md:text-[40px] md:leading-[48px]  font-supply font-medium tracking-[-0.15px] order-last md:order-first">
           {candidate?.name}
         </h3>
         <div className="flex-wrap gap-x-6 gap-y-1 md:flex mt-5 text-accent-foreground">
@@ -29,11 +29,11 @@ const TalentCard: React.FC<{ candidate: TCandidate }> = ({ candidate }) => {
         ></div>
         <div>
           <p className="text-accent-foreground">Worked at:</p>
-          <div className="flex items-center justify-between w-full">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full">
             <div className="flex items-center gap-2">
               <BriefcaseBusiness />
               <div>
-                <p className="text-lg font-bold">Senior Full Stack Engineer</p>
+                <p className="md:text-lg font-bold">Senior Full Stack Engineer</p>
                 <p className="text-accent-foreground">Lenek Tech</p>
               </div>
             </div>
@@ -44,7 +44,7 @@ const TalentCard: React.FC<{ candidate: TCandidate }> = ({ candidate }) => {
             {candidate?.skills.map((skill, index) => (
               <p
                 key={index}
-                className="px-2.5 py-[5px] rounded-full border border-dGrey1/60 dark:border-white/60 bg-dGrey1/10 dark:bg-white/10 text-sm dark:text-white whitespace-nowrap flex items-center gap-1 md:text-sm !border-[#FFFFFF80] !bg-[#00000066]"
+                className="px-2.5 py-[5px] rounded-full border  dark:text-white whitespace-nowrap flex items-center gap-1 text-xs md:text-sm !border-[#FFFFFF80] !bg-[#00000066]"
               >
                 {skill}
               </p>

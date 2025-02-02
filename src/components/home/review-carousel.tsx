@@ -37,7 +37,7 @@ const CarouselPlugin: React.FC<{ reviews: TReview[] }> = ({ reviews }) => {
             delay: 2000,
           }),
         ]}
-        className="w-full max-w-7xl mx-auto px-6"
+        className="w-full max-w-7xl mx-auto px-6 overflow-hidden"
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}
         ref={emblaRef}
@@ -46,7 +46,7 @@ const CarouselPlugin: React.FC<{ reviews: TReview[] }> = ({ reviews }) => {
           {reviews.map((review) => (
             <CarouselItem
               key={review.id}
-              className="pl-6 md:basis-1/2 lg:basis-1/3"
+              className="pl-6 md:basis-1/2 lg:basis-1/3 overflow-hidden"
             >
               <ReviewCard review={review} />
             </CarouselItem>
