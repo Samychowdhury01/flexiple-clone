@@ -16,6 +16,8 @@ const filterOptions = {
     { value: "Nextjs", label: "Next.js" },
     { value: "Angular", label: "Angular" },
     { value: "Node.js", label: "Node.js" },
+    { value: "Python", label: "Python" },
+    { value: "Docker", label: "Docker" },
   ],
   notice: [
     { value: "Immediately Available", label: "Immediately Available" },
@@ -47,7 +49,7 @@ const SelectForFilterCandidates = () => {
       router.replace(`?${params.toString()}`, { scroll: false });
     };
 
-    updateURL(); // Explicitly call the function
+    updateURL();
   }, [filters, router, searchParams]);
 
   return (

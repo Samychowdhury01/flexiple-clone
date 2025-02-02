@@ -31,7 +31,12 @@ const CarouselPlugin: React.FC<{ reviews: TReview[] }> = ({ reviews }) => {
   return (
     <div className="w-full py-12">
       <Carousel
-        plugins={[plugin.current]}
+        // plugins={[plugin.current]}
+        plugins={[
+          Autoplay({
+            delay: 2000,
+          }),
+        ]}
         className="w-full max-w-7xl mx-auto px-6"
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}
